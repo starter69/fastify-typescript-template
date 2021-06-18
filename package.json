@@ -1,0 +1,56 @@
+{
+  "name": "node-fastify-typescript-template",
+  "main": "dist/index.mjs",
+  "author": "A-J Roos <asjas@hey.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
+  "scripts": {
+    "start": "node dist/index.mjs",
+    "build": "rimraf dist && babel --extensions '.ts' src/ --out-dir dist/ --out-file-extension .mjs",
+    "dev": "tsnd --transpile-only --respawn src/index.ts",
+    "test": "tap",
+    "test:w": "tap -w",
+    "test:inspect": "tap -O -T --node-arg=--inspect-brk",
+    "coverage": "npm test -- --coverage-report=lcov",
+    "docker:up": "docker-compose up -d --build",
+    "docker:down": "docker-compose down -d",
+    "check-types": "tsc",
+    "lint": "eslint --ext .ts .",
+    "lint-fix": "npm run lint -- --fix",
+    "prettier": "prettier --ignore-path .eslintignore \"**/*.+(ts)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm-run-all --parallel check-types check-format lint build"
+  },
+  "dependencies": {
+    "fastify": "3.18.0",
+    "fastify-autoload": "3.7.1",
+    "fastify-env": "2.1.1",
+    "fastify-favicon": "3.1.0",
+    "fastify-healthcheck": "3.1.0",
+    "fastify-postgres": "3.5.0",
+    "fluent-json-schema": "3.0.0",
+    "pg": "8.6.0",
+    "pino-pretty": "5.0.2",
+    "under-pressure": "5.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.14.5",
+    "@babel/core": "7.14.6",
+    "@babel/plugin-syntax-top-level-await": "7.14.5",
+    "@babel/preset-typescript": "7.14.5",
+    "@types/node": "15.12.2",
+    "@types/tap": "15.0.3",
+    "babel-plugin-module-extension-resolver": "1.0.0-rc.2",
+    "eslint-config-asjas": "0.0.25",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2",
+    "tap": "15.0.9",
+    "ts-node": "10.0.0",
+    "ts-node-dev": "1.1.6",
+    "typescript": "4.3.3"
+  }
+}
