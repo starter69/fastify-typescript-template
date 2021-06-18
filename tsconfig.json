@@ -1,0 +1,25 @@
+{
+  "ts-node": {
+    "files": true,
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "allowJs": false
+    }
+  },
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ESNEXT",
+    "module": "ESNext",
+    "lib": ["ESNEXT"],
+    "noEmit": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "types": ["tap"],
+  "exclude": ["node_modules"],
+  "include": ["src/**/*", "test/**/*"]
+}
