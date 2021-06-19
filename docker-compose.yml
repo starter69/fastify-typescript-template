@@ -1,11 +1,13 @@
 version: "2.4"
 
 services:
-  web:
-    build: .
-    depends_on:
-      - db
-      - redis
+  webapp:
+    container_name: fastify-api
+      build:
+        context: .
+      depends_on:
+        - db
+        - redis
   redis:
     image: redis:6.2.4-alpine
     restart: always
