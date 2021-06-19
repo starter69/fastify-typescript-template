@@ -1,9 +1,14 @@
-.git
-.gitignore
 node_modules/
 dist/
+test/
+.vscode/
 *.md
-.eslint*
+.git
+.gitignore
+.eslintrc
+.eslintignore
 .prettierrc.js
 .taprc
 .DS_Store
+.env
+.env.sample

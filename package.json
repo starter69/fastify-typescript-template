@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node dist/index.mjs",
     "build": "rimraf dist && babel --extensions '.ts' src/ --out-dir dist/ --out-file-extension .mjs",
-    "dev": "tsnd --transpile-only --respawn src/index.ts",
+    "dev": "nodemon",
     "test": "tap",
     "test:w": "tap -w",
     "test:inspect": "tap -O -T --node-arg=--inspect-brk",
@@ -44,6 +44,7 @@
     "@types/tap": "15.0.3",
     "babel-plugin-module-extension-resolver": "1.0.0-rc.2",
     "eslint-config-asjas": "0.0.25",
+    "nodemon": "^2.0.7",
     "npm-run-all": "4.1.5",
     "rimraf": "3.0.2",
     "tap": "15.0.9",
