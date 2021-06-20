@@ -3,6 +3,7 @@
   "main": "dist/index.mjs",
   "author": "A-J Roos <asjas@hey.com>",
   "license": "MIT",
+  "type": "module",
   "engines": {
     "node": ">=14",
     "npm": ">=7"
@@ -11,7 +12,7 @@
     "start": "node dist/index.mjs",
     "build": "npm-run-all clean build:docker",
     "build:docker": "babel --extensions '.ts' src/ --out-dir dist/ --out-file-extension .mjs",
-    "dev": "nodemon",
+    "dev": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
     "clean": "rimraf dist",
     "test": "tap",
     "test:w": "tap -w",
