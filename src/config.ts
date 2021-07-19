@@ -4,7 +4,7 @@ import S from "fluent-json-schema";
 const schema = S.object()
   .prop("PORT", S.number().required())
   .prop("LOG_LEVEL", S.string().default("info"))
-  .prop("PRETTY_PRINT", S.string().default(true));
+  .prop("PRETTY_PRINT", S.boolean().default(false));
 
 export type Config = {
   logger: boolean;
