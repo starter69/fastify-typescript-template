@@ -41,7 +41,7 @@
     "fastify-favicon": "3.1.0",
     "fastify-healthcheck": "3.1.0",
     "fluent-json-schema": "3.0.1",
-    "pino-pretty": "5.1.1",
+    "pino-pretty": "5.1.2",
     "under-pressure": "5.7.0"
   },
   "devDependencies": {
