@@ -42,7 +42,7 @@
     "fastify-healthcheck": "3.1.0",
     "fluent-json-schema": "3.0.1",
     "pino-pretty": "7.0.1",
-    "under-pressure": "5.7.0"
+    "under-pressure": "5.8.0"
   },
   "devDependencies": {
     "@types/node": "16.4.13",
