@@ -45,7 +45,7 @@
     "under-pressure": "5.8.0"
   },
   "devDependencies": {
-    "@types/node": "16.4.13",
+    "@types/node": "16.11.6",
     "@types/tap": "15.0.5",
     "eslint-config-asjas": "0.0.25",
     "nodemon": "2.0.14",
